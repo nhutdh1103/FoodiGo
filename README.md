@@ -19,7 +19,7 @@ Setting up:
   2. Place the 'FoodiGo' folder in the {Drive you installed xampp on}/xampp/htdoc directory.
   3. Run the XAMPP control panel (xampp-control.exe) found in xampp director
   4. Start the Apache Server and MYSQL services in XAMPP control panel.
-  5. Open any browser, and run localhost/phpMyAdmin.
+  5. Open any browser, and run localhost/phpmyadmin.
   6. IN phpMyAdmin, Create a new database with the "New" Button on the left.
   7. Name the new database as "foodigo" and click Create.
   8. Select the newly created "foodigo" database.
