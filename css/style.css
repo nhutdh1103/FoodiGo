@@ -54,7 +54,7 @@ body{
 .btn{
    display: inline-block;
    background: #abdef0;
-   color: rgb(129, 77, 173) ;
+   color: rgb(5, 0, 9) ;
    padding: 8px 30px;
    margin: 30px 20px;
    border-radius: 30px;
@@ -201,7 +201,7 @@ p{
 
 /*--------- Features Category ---------------*/
 .features{
-    background: #f4b8e2;
+    background: rgba(0,0,0,.075);
     margin-top: 0px;
 }
 

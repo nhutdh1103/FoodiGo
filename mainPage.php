@@ -11,14 +11,15 @@
 
 
     <!-- FEATURES CATEGORIES SECTION -->
-    <div class = "features">
+    <link rel="stylesheet" href="css/style.css">
+        <div style="background-color:rgba(0,0,0,.075);" class = "features">
         <div class="container">
             <h2><b>How are We Different?</b></h2>
             <hr>
             <div class="row">
                 <div class="col-3">
                     <i class="fa fa-truck"></i>
-                    <p>We deliver your items within 24 hours!</p>
+                    <p> We deliver your items within 24 hours!</p>
                 </div>
                 <div class="col-3">
                     <i class="fa fa-archive"></i>

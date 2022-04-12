@@ -54,7 +54,7 @@ include "db_conn.php";
         <div class = "row">
             <div class ="column">
                 <link rel="stylesheet" href="style.css">
-                <img src="images/logo.png" id="bg" alt="">
+                <img src="images/logo2.jpg" id="bg" alt="">
                 
                 <hr>
                 <center style="background-color:rgb(253, 201, 201);">

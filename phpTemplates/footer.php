@@ -3,9 +3,9 @@
 <div class="footer">
     
         <div style="background-color:#9bbddf;" class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="footer-col-1">
-                    <h3 style="color:#1a1818;"> Contact Us </h3>
+                    <h3 style="color:#1a1818;">Contact Us </h3>
                     <p style="color:#1a1818;">Call (408) 765-4321</p>
                 </div>
 

@@ -1,7 +1,7 @@
-11/15 Sunday
+4/12/2022 Tuesday
 
 - remove unnecessary information from user table
 - make new payment information table?
-- Tam - edit main page introduction
-- Stan - work on linking login system with master branch
+- Do - edit main page introduction
+- Kean - work on linking login system with master branch
 - Sessions to replace product_details_table? 

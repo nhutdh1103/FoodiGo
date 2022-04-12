@@ -9,7 +9,7 @@
 {
   height:120% ;
   width: 100% ;
-  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url("../images/market.jpg");
+  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url("images\market.jpg");
   background-position: center;
 
 background-size: cover;
@@ -116,8 +116,8 @@ span{
   left:450px;
 }
 .error {
-   background: #6aff5d;
-   color: #ffffff;
+   background: #85d37e;
+   color: #d24d4d;
    padding: 5px;
    width: 95%;
    border-radius: 2px;
