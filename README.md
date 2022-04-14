@@ -2,7 +2,7 @@
 This is a full-stack web application about the online food store for our CMPE 131 software engineering group project. 
 
 Group Members: 
-1. Pra
+1. Pranav Iyengar
 2. Chandan
 3. Grab
 4. Keen
