@@ -5,7 +5,7 @@ Group Members:
 1. Pranav Iyengar
 2. Chandan
 3. Grab
-4. Keen
+4. Kean Onn Lee
 5. Quyen Nguyen
 6. Khoi Le
 7. Do Tran
