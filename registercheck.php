@@ -25,7 +25,8 @@ if (isset($_POST['username']) && isset($_POST['password'])
 	if (empty($username)) {
 		header("Location: loginregister.php?error=User Name is required&$user_data");
 	    exit();
-	}else if(empty($pass)){
+	}
+  else if(empty($pass)){
         header("Location: loginregister.php?error=Password is required&$user_data");
 	    exit();
 	}
@@ -41,6 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])
         header("Location: loginregister.php?error=Email is required&$user_data");
 	    exit();
 	}
+
   else if($pass !== $re_pass){
         header("Location: loginregister.php?error=The confirmation password  does not match&$user_data");
 	    exit();
