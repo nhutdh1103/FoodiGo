@@ -113,9 +113,10 @@
                           </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/doggo.jpg" alt="Third Slide">
+                        <img style="margin-bottom: 25px;" src="images/khoilogo.jpg" alt="Third Slide">
                         <div class="carousel-caption">
-                            <h3>Khoi Le</h3>
+
+                            <h3 style="margin-top: 14%;">Khoi Le</h3>
                           </div>
                     </div>
                     <div class="carousel-item">
