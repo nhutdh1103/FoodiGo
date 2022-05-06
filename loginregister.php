@@ -4,7 +4,7 @@
 <head>
 <title>Login and Register</title>
 
-    <link  href="css/loginstyle.css" type="text/css" rel="stylesheet">
+    <link  href="css/loginstyle1.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class ="background">
@@ -17,9 +17,7 @@
 
       </div>
       <div class="media-icon">
-        <img src="images/facebook.png">
-        <img src="images/twitter.png">
-        <img src="images/insta.png">
+        <h2 style="margin-bottom: -15px;">Welcome To FoodiGo</h2>
 
         </div>
         <form  action = "logincheck.php" method="POST" id="register" class= "input">
@@ -76,7 +74,7 @@
           <input type ="email"  name="email" id="email" class="input-field" placeholder="Email Address" >
 
             <input type ="text" name="password" id="password" class="input-field" placeholder="Enter Your Password" >
-              <input type ="text" name="re_password" id="re_password" class="input-field" placeholder="Re-Enter Your Password" >
+              <input type ="text" name="re_password" id="re_password" class="input-field" placeholder="Confirm Your Password" >
             <input type="checkbox" required class="check-box"<span>I agree to the terms of serivice</span>
             <button type="submit" class="submit-button">Register</button>
             </form>
@@ -98,7 +96,8 @@
     y.style.left= "450px";
     z.style.left= "0px";
   }
-  </script>
+</script>
+
 
 </body>
 </html>
