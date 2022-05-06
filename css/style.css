@@ -76,7 +76,7 @@ body{
 
 .col-3{
     flex: 33%;
-    min-width: 180px; 
+    min-width: 180px;
     margin-bottom: 30px;
 }
 
@@ -89,7 +89,7 @@ body{
 
 .col-4 img{
     width:80%;
-    
+
 }
 
 
@@ -136,15 +136,15 @@ p{
 /* --------------- HeaderNav ----------------- */
 .header-nav{
     background:rgba(234, 140, 140, 0.904);
-    
+
 
 }
 
 #bg {
-    position: middle; 
-    top: 0; 
-    left: 0; 
-      
+    position: middle;
+    top: 0;
+    left: 0;
+
     /* Preserve aspet ratio */
     width: 200%;
     height: 200%;
@@ -163,7 +163,7 @@ p{
 .header{
     background-image: url("/goceries/images/market.jpg");
     /* background-color: rgb(114, 245, 232); */
-    
+
 }
 
 .header .row{
@@ -172,7 +172,7 @@ p{
 
 .header img{
     width: 300px;
-    
+
 }
 
 .header .column{
@@ -194,7 +194,7 @@ p{
 }
 .cart-icon:hover{
     transform: scale(1.5);
-    
+
 }
 
 
@@ -220,7 +220,7 @@ p{
 /* ---------Product Categories------------- */
 .categories{
     margin-top: 0px;
-} 
+}
 
 .categories h2{
     text-align: center;
@@ -247,7 +247,7 @@ p{
 .team-members{
     background: #F7F7F7;
     margin-top: 0px;
-    
+
 }
 
 .team-members h2{
@@ -314,7 +314,7 @@ p{
 .footer-col-3, .footer-col-4{
     flex-basis: 12%;
     text-align: center;
-    
+
 }
 
 .footer ul{
@@ -412,7 +412,7 @@ p{
 
 .col-2{
     flex: 50%;
-    min-width: 180px; 
+    min-width: 180px;
     margin-bottom: 30px;
 }
 
@@ -440,4 +440,3 @@ p{
 .account-container{
     margin-bottom: 200px;
 }
-    
