@@ -37,9 +37,13 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
     ?>
 
     <!-- ALL PRODUCTS SECTION -->
+    
     <div class="categories all-products">
-
+    <?php
+        echo "<body style='background-color: #f6eed8;'>";
+    ?>
         <div class="small-container">
+        
             <h2><b>All Products</b></h2>
 
         <form>
