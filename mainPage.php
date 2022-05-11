@@ -120,7 +120,7 @@
                           </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/doggo.jpg" alt="Third Slide">
+                        <img src="images/keanPicture.png" alt="Third Slide">
                         <div class="carousel-caption">
                             <h3>Kean Lee</h3>
                           </div>
