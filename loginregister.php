@@ -29,7 +29,7 @@
           <?php } ?>
           <input type ="text" name="userid" id="userid" class="input-field" placeholder="Username" required>
 
-            <input type ="text" class="input-field" name="password" id="password" placeholder="Enter Your Password" required>
+            <input type ="password" class="input-field" name="password" id="password" placeholder="Enter Your Password" required>
             <input type="checkbox" class="check-box"<span>Remember Your Password</span>
             <button type="submit" class="submit-button">Login</button>
           </form>
@@ -73,13 +73,28 @@
 
           <input type ="email"  name="email" id="email" class="input-field" placeholder="Email Address" >
 
-            <input type ="text" name="password" id="password" class="input-field" placeholder="Enter Your Password" >
-              <input type ="text" name="re_password" id="re_password" class="input-field" placeholder="Confirm Your Password" >
+            <input type ="password" name="password" id="password" class="input-field" placeholder="Enter Your Password" >
+            <? //php 
+            //$password = "password";
+            //$uppercase = preg_match('@[A-Z]@', $password);
+            //$lowercase = preg_match('@[a-z]@', $password);
+            //$number    = preg_match('@[0-9]@', $password);
+           // $specialChars = preg_match('@[^\w]@', $password);
+
+           // if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
+             // echo 'Password should be at least 8 characters in length and should include at least one upper case letter, number, and special character';
+        
+            //}else{
+             // echo 'Strong password.';
+            //} ?>
+              <input type ="password" name="re_password" id="re_password" class="input-field" placeholder="Confirm Your Password">
             <input type="checkbox" required class="check-box"<span>I agree to the terms of serivice</span>
             <button type="submit" class="submit-button">Register</button>
+        
             </form>
+            
     </div>
-
+   
 
     </div>
 
