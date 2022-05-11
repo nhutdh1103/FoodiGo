@@ -27,7 +27,7 @@ Setting up:
   9. Choose the 'goceries_final.sql' script and click "Go" to import the database.
   
 Running the Website:
-  1. run localhost/FoodiGo/FoodiGo/mainPage.php in any web browser (Recommended: Safari or Chrome).
+  1. run localhost/FoodiGo/mainPage.php in any web browser (Recommended: Safari or Chrome).
   2. Refer to the User's Guide for the detailed usage and functionalities of our website. 
   3. Refer to the video walkthrough of the website to understand the entire usage flow, from 
      account sign up to checkout of shopping cart.
