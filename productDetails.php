@@ -68,15 +68,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
         include('functions.php'); 
     ?>
 
-    <!-- WHAT I AM ACTUALLY SUPPOSED TO DO:
-        - fix the product details page
-        - get the product id
-        - make an product array based on currentPage's productID
-        - upon "add", that array is added to the cart
-        - if the array already exists in the cart, update its quantity when "add" is pressed, DONT make new array.
-        -
-    -->
-
     <?php
     // ADDED INTEGRATION TO CART (TRIAL)
 
