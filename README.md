@@ -3,8 +3,8 @@ This is a full-stack web application about the online food store for our CMPE 13
 
 Group Members: 
 1. Pranav Iyengar
-2. Chandan
-3. Grab
+2. Chandan Reddy
+3. Gary Crabtree
 4. Kean Onn Lee
 5. Le Ngoc Quyen Nguyen
 6. Khoi Le
@@ -21,10 +21,10 @@ Setting up:
   4. Start the Apache Server and MYSQL services in XAMPP control panel.
   5. Open any browser, and run localhost/phpmyadmin.
   6. IN phpMyAdmin, Create a new database with the "New" Button on the left.
-  7. Name the new database as "goceries" and click Create.
-  8. Select the newly created "goceries" database.
+  7. Name the new database as "groceries" and click Create.
+  8. Select the newly created "groceries" database.
   8. Click on the "Import" tab at the top.
-  9. Choose the 'goceries_final.sql' script and click "Go" to import the database.
+  9. Choose the 'groceries_final.sql' script and click "Go" to import the database.
   
 Running the Website:
   1. run localhost/FoodiGo/mainPage.php in any web browser (Recommended: Safari or Chrome).
