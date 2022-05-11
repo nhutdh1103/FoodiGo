@@ -202,7 +202,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 </form>
 </td>
 <td>
-<?php if($product['product_stock'] > 10) {?>
+<?php if($product['product_stock'] > 1) {?>
 
 <form method='post' action=''>
 <input type='hidden' name='product_ID' value="<?php echo $product["product_ID"]; ?>" />
