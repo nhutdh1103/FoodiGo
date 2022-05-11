@@ -202,7 +202,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 </form>
 </td>
 <td>
-<?php if($product['product_stock'] > 1) {?>
+<?php if($product['product_stock'] > 10) {?>
 
 <form method='post' action=''>
 <input type='hidden' name='product_ID' value="<?php echo $product["product_ID"]; ?>" />
@@ -218,6 +218,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <option <?php if($product["quantity"]==8) echo "selected";?> value="8">8</option>
 <option <?php if($product["quantity"]==9) echo "selected";?> value="9">9</option>
 <option <?php if($product["quantity"]==10) echo "selected";?> value="10">10</option>
+
 </select>
 </form>
 <?php } else { ?> <h6>Qty = <?php echo $product["quantity"]; ?></h6><p><a href= "<?php printf('%s?product_id=%s','productDetails.php', $product['product_ID'])?>">add more</a><br />
