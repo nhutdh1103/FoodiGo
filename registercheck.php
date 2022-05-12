@@ -67,7 +67,7 @@ if (isset($_POST['username']) && isset($_POST['password'])
   else{
 
     // hashing the password
-          $password = md5($password);
+          $password = md5($_POST['password']);
 
   	    $sql = "SELECT * FROM users WHERE user_loginname='$userid' ";
         $sql1 = "SELECT * FROM users WHERE user_email='$email' ";
