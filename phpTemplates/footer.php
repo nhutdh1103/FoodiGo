@@ -31,7 +31,9 @@
                     </ul>
                 </div>
 
+                <!--
                 <div class="footer-col-3">
+                    
                     <h3 style="color:#1a1818;">Useful Links</h3>
                     <ul>
                         <li style="color:#1a1818;">Coupons</li>
@@ -39,8 +41,10 @@
                         <li style="color:#1a1818;">Return Policy</li>
                         <li style="color:#1a1818;">Join Affiliate</li>
                     </ul>
+                    
                 </div>
-
+                -->
+                <!--
                 <div class="footer-col-4">
                     <h3 style="color:#1a1818;">Follow Us</h3>
                     <ul>
@@ -49,6 +53,8 @@
                         <li style="color:#1a1818;">Twitter</li>
                     </ul>
                 </div>
+                -->
+                
             </div>
             <hr>
             <p style="color:#1a1818;" class = "copyright">Copyright 2022 FoodiGo </p>
