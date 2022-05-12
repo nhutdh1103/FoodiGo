@@ -41,18 +41,6 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_ID`, `user_ID`, `order_total`, `order_tax`, `order_date`, `order_delivery_status`) VALUES
-(1607018510, 13, '46.09', '4.19', '2020-12-03 08:50:09', 'Processing Order'),
-(1607029390, 13, '46.09', '4.19', '2020-12-03 08:52:08', 'Processing Order'),
-(1607038642, 13, '14.16', '1.29', '2020-12-03 14:03:18', 'Processing Order'),
-(1607041085, 13, '40.85', '3.71', '2020-12-03 14:01:31', 'Processing Order'),
-(1607045003, 13, '4.95', '0.45', '2020-12-03 16:23:36', 'Processing Order'),
-(1607045206, 13, '8.20', '0.75', '2020-12-03 15:17:17', 'Processing Order'),
-(1607048628, 15, '53.04', '4.37', '2020-12-03 17:52:55', 'Processing Order'),
-(1607056619, 14, '66.81', '5.62', '2020-12-03 17:37:55', 'Processing Order'),
-(1607056820, 17, '2.75', '0.25', '2020-12-03 19:07:58', 'Processing Order'),
-(1607061634, 17, '38.65', '3.06', '2020-12-03 19:04:03', 'Processing Order'),
-(1607066159, 16, '82.72', '7.07', '2020-12-03 18:45:41', 'Processing Order');
 
 -- --------------------------------------------------------
 
@@ -71,26 +59,6 @@ CREATE TABLE `orders_products_details` (
 -- Dumping data for table `orders_products_details`
 --
 
-INSERT INTO `orders_products_details` (`order_ID`, `product_ID`, `order_product_totalweight`, `order_product_totalquantity`) VALUES
-(1607029390, 404, '10.00', 10),
-(1607029390, 104, '8.00', 4),
-(1607041085, 303, '10.00', 4),
-(1607041085, 203, '4.00', 2),
-(1607038642, 401, '10.20', 3),
-(1607045206, 206, '1.25', 5),
-(1607045003, 106, '1.00', 1),
-(1607056619, 204, '0.40', 2),
-(1607056619, 101, '1.75', 5),
-(1607056619, 201, '3.00', 3),
-(1607056619, 403, '18.00', 2),
-(1607048628, 401, '20.40', 6),
-(1607048628, 203, '4.00', 2),
-(1607048628, 404, '5.00', 5),
-(1607066159, 402, '27.00', 3),
-(1607066159, 401, '6.80', 2),
-(1607061634, 203, '20.00', 10),
-(1607061634, 402, '9.00', 1),
-(1607056820, 104, '2.00', 1);
 
 -- --------------------------------------------------------
 
@@ -124,18 +92,7 @@ CREATE TABLE `payments` (
 -- Dumping data for table `payments`
 --
 
-INSERT INTO `payments` (`payment_user_id`, `payment_fname`, `payment_lname`, `payment_email`, `payment_address`, `payment_city`, `payment_state`, `payment_zip`, `payment_cardholder`, `payment_ccnumber`, `payment_expmonth`, `payment_expyear`, `payment_cvv`, `payment_billingname`, `payment_billingemail`, `payment_billingaddress`, `payment_billingcity`, `payment_billingstate`, `payment_billingzip`) VALUES
-(13, 'LiJie', 'Leow', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112', 'Li Jie Leow', '0000000000000000', 'January', '2013', '333', 'Li Jie', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112'),
-(13, 'Li', 'Jie', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112', 'Leow', '0000000000000000', 'January', '2030', '123', 'Li', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112'),
-(13, 'Li', 'Jie', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112', 'Leow', '1231232132132131', 'January', '2011', '311', 'Li', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112'),
-(13, 'Li', 'Jie', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112', 'Leow', '1232131232133213', 'November', '2013', '333', 'Li', 'lijie.leow@sjsu.edu', 'One Washington Square', 'San Jose', 'CA', '95112'),
-(13, 'dfsa', 'Jie', 'dafsfd@gmai.com', 'fdsaf', 'adsf', 'CA', '94539', 'Leow', '1231232131231232', 'January', '2011', '333', 'dfsa', 'dafsfd@gmai.com', 'fdsaf', 'adsf', 'CA', '94539'),
-(13, 'LJ', 'Leow', 'lijie.leow@sjsu.edu', 'One washington Square', 'san jose', 'CA', '95112', 'Leow', '1234123412341234', 'January', '2022', '333', 'LJ', 'lijie.leow@sjsu.edu', 'One washington Square', 'san jose', 'CA', '95112'),
-(14, 'Bob', 'B', 'b@yahoo.com', '1 B', 'B', 'CA', '91023', 'B', '1123817239810273', 'January', '2021', '103', 'Bob', 'b@yahoo.com', '1 B', 'B', 'CA', '91023'),
-(15, 'Bob', 'b', '2@gmail.com', '1 B', 'B', 'CA', '91032', 'B', '1238712309127309', 'January', '2021', '103', 'Bob', '2@gmail.com', '1 B', 'B', 'CA', '91032'),
-(16, 'LJ', 'Leow', 'lijie.leow@sjsu.edu', 'One washington Square', 'san jose', 'CA', '95112', 'Leow', '2798123789327983', 'January', '2022', '333', 'LJ', 'lijie.leow@sjsu.edu', 'One washington Square', 'san jose', 'CA', '95112'),
-(17, 'Marissa', 'Student', 'marissa@gmail.com', 'apple', 'apple', 'CA', '95123', 'Marissa', '1238912038921823', 'January', '2021', '232', 'Marissa', 'marissa@gmail.com', 'apple', 'san jose', 'CA', '95123'),
-(17, 'Marissa', 'Leow', 'marissa@gmail.com', 'apple', 'apple', 'CA', '95123', 'Leow', '3204829043802342', 'January', '2022', '333', 'Marissa', 'marissa@gmail.com', 'apple', 'apple', 'CA', '95123');
+
 
 -- --------------------------------------------------------
 
@@ -202,13 +159,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_loginname`, `user_password`, `user_name`, `user_email`) VALUES
-(13, 'test', '8eee3efdde1eb6cf6639a58848362bf4', 'Li Jie', 'lijie.leow@sjsu.edu'),
-(14, 'stan1', '202cb962ac59075b964b07152d234b70', 's', '2@gmail.com'),
-(15, 'stan2', '202cb962ac59075b964b07152d234b70', 'Stan', 'thong2@gmail.com'),
-(16, 'test3', '86985e105f79b95d6bc918fb45ec7727', 'test3', 'test3@gmail.com'),
-(17, 'marissa', '098f6bcd4621d373cade4e832627b4f6', 'Marissa', 'marissa@gmail.com'),
-(18, 'example', 'e10adc3949ba59abbe56e057f20f883e', 'example', 'example@gmail.com');
+
+
 
 --
 -- Indexes for dumped tables
