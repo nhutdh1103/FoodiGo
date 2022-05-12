@@ -69,7 +69,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
     ?>
 
     <?php
-    // ADDED INTEGRATION TO CART (TRIAL)
+    // ADDED INTEGRATION TO CART
 
         if (isset($_GET['product_id']) && $_GET['product_id']!=""){
             $product_ID = $_GET['product_id'];
@@ -88,7 +88,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
                 'product_ID'=>$product_ID,
                 'product_price'=>$price,
                 'product_weight'=>$weight,
-                'quantity'=>1, //default quantity = 1; is there a problem here?
+                'quantity'=>1, //default quantity = 1; 
                 'product_imagename'=>$image,
                 'product_stock'=>$stock
             );
@@ -104,7 +104,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
 
             //echo '<br>product id is: ' . $_GET['product_id'] . '<br>';
 
-            //works, but fix for better readability?
             if(!isset( $_SESSION['tempProductQuantity'][$product_ID] )){
                 $_SESSION['tempProductQuantity'][$product_ID] = $tempProductQuantity; //initialize to quantity in product db
             }
@@ -127,7 +126,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
 
                 }else{
                     //loop through cart, if product id found, increment. else add product to cart.
-                    foreach($_SESSION['shopping_cart'] as &$cartProduct){ //TODO: this line not executed yet I think.
+                    foreach($_SESSION['shopping_cart'] as &$cartProduct){
                         if($cartProduct['product_ID'] == $product_ID){
                             $cartProduct['quantity'] = $cartProduct['quantity'] +1;
                             $alreadyInCart = true;
@@ -141,6 +140,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
                             // echo 'quantity counter is: ' . $counter;
                             // echo '<br>';
                             // echo 'POST value before reset is: ' . $_POST['addToCart'];
+
                             if($_SESSION['tempProductQuantity'][$product_ID] > 0){
                                 $_SESSION['tempProductQuantity'][$product_ID] = $_SESSION['tempProductQuantity'][$product_ID]- 1;
                             }
@@ -157,8 +157,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
 
                     }
                 }
-
-
+                
                 //debug temp stock counter
                 // echo 'product stock left is: ' . $_SESSION['tempProductQuantity'][$product_ID]. '<br>';
                 // print_r( $_SESSION['tempProductQuantity']);
@@ -182,8 +181,10 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
 
 
     if(!empty($_SESSION["shopping_cart"])) {
-        $cart_count = count(array_keys($_SESSION["shopping_cart"]));   //this count the number of products in the cart (not quantity);
+        $cart_count = count(array_keys($_SESSION["shopping_cart"])); 
+          //this count the number of products in the cart (not quantity);
     ?>
+    
     <!-- cart icon with number -->
     <!-- <div class="cart_div">
     <a href="cart.php"><img src="images/cart-icon.png" /> Cart<span><?php //echo $cart_count; ?></span></a>
