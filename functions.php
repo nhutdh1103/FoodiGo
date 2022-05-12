@@ -1,7 +1,4 @@
 <?php
-//this page is like the controller (i think)
-
-
 //requires mySQL connection
 include('database/DBController.php');
 
@@ -9,13 +6,11 @@ include('database/DBController.php');
 include('database/Product.php');
 
 
-//all objects are created here
+//Objects are created here
 
 //DBController object;
-$db = new DBController();  //creates a db controller object which its constructor creates a connection
-
-
-
+$db = new DBController(); 
+ //creates a db controller object which its constructor creates a connection
 
 // ------------------------------------- product ------------------------------------------//
 
@@ -33,25 +28,13 @@ $dairiesArray = $product->getProductsByCategory('Dairy & Eggs');
 
 
 //get a single product by id from db
-// $singleProductWithDetails = $product->getSingleProduct($_GET['product_id']); //where to get $productID?
+// $singleProductWithDetails = $product->getSingleProduct($_GET['product_id']);
 
 
 //get single product's quantity
 // $productQuantity = $product->getProductStock($_GET['product_id']);
 
 // ------------------------------------- product ------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 
 
