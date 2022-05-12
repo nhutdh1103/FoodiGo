@@ -315,8 +315,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
 
     // $_SESSION['finalprice'] = $_POST['finalprice'];
     // $_SESSION['taxes'] = $_POST['taxes'];
-
-    //try
+    
     isset($_POST['finalprice'])? $_SESSION['finalprice'] = $_POST['finalprice']: $_SESSION['finalprice'] = 0;
     isset($_POST['taxes'])? $_SESSION['taxes'] = $_POST['taxes']: $_SESSION['taxes'] = 0;
 
