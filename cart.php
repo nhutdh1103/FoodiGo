@@ -190,7 +190,9 @@ foreach ($_SESSION["shopping_cart"] as $product){
 ?>
 
 <tr>
-<!-- <td><img src='<?php echo 'images/' . $product["product_imagename"]; ?>' width="80" height="60" /></td> -->
+<!-- <td><img src='
+<?php echo 'images/' . $product["product_imagename"]; ?>
+' width="80" height="60" /></td> -->
 <td><a href= "<?php printf('%s?product_id=%s','productDetails.php', $product['product_ID'])?>"><img src="images/<?php echo $product['product_imagename']?>" width='80' height='60'></a></td>
 
 <td><a href= "<?php printf('%s?product_id=%s','productDetails.php', $product['product_ID'])?>"><?php echo $product["product_name"]; ?></a><br />
@@ -308,6 +310,7 @@ $final_amount = $total_price + $taxes + $delivery;
 </script> -->
 
 <!-- FOOTER -->
+
 <?php
     include('phpTemplates/footer.php');
 ?>
