@@ -74,19 +74,19 @@
           <input type ="email"  name="email" id="email" class="input-field" placeholder="Email Address" >
 
             <input type ="password" name="password" id="password" class="input-field" placeholder="Enter Your Password" >
-            <? //php 
-            //$password = "password";
-            //$uppercase = preg_match('@[A-Z]@', $password);
-            //$lowercase = preg_match('@[a-z]@', $password);
-            //$number    = preg_match('@[0-9]@', $password);
-           // $specialChars = preg_match('@[^\w]@', $password);
+            <? php 
+            $password = $_POST['password'];
+            $uppercase = preg_match('@[A-Z]@', $password);
+            $lowercase = preg_match('@[a-z]@', $password);
+            $number    = preg_match('@[0-9]@', $password);
+            $specialChars = preg_match('@[^\w]@', $password);
 
-           // if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
-             // echo 'Password should be at least 8 characters in length and should include at least one upper case letter, number, and special character';
+            if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
+              echo 'Password should be at least 8 characters in length and should include at least one upper case letter, number, and special character';
         
-            //}else{
-             // echo 'Strong password.';
-            //} ?>
+            }else{
+              echo 'Strong password.';
+            } ?>
               <input type ="password" name="re_password" id="re_password" class="input-field" placeholder="Confirm Your Password">
             <input type="checkbox" required class="check-box"<span>I agree to the terms of serivice</span>
             <button type="submit" class="submit-button">Register</button>

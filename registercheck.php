@@ -13,10 +13,21 @@ if (isset($_POST['username']) && isset($_POST['password'])
 	   $data = htmlspecialchars($data);
 	   return $data;
 	}
-
+	function validatePassword($password){
+		$password = $_POST['password'];
+		$uppercase = preg_match('@[A-Z]@', $password);
+		$lowercase = preg_match('@[a-z]@', $password);
+		$number    = preg_match('@[0-9]@', $password);
+		$specialChars = preg_match('@[^\w]@', $password);
+		if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
+			return FALSE ;
+	  
+		  }else{
+			return TRUE;}
+	 }
 	$username = validate($_POST['username']);
-	$pass = validate($_POST['password']);
-  $re_pass = validate($_POST['re_password']);
+	//$pass = validatePassword($_POST['password']);
+ //$re_pass = validate($_POST['re_password']);
   $userid = validate($_POST['userid']);
   $email = validate($_POST['email']);
   $user_data = 'userid=' . $userid. '&username='. $username;
@@ -26,11 +37,15 @@ if (isset($_POST['username']) && isset($_POST['password'])
 		header("Location: loginregister.php?error=User Name is required&$user_data");
 	    exit();
 	}
-  else if(empty($pass)){
+  else if(empty($_POST['password'])){
         header("Location: loginregister.php?error=Password is required&$user_data");
 	    exit();
 	}
-  else if(empty($re_pass)){
+	else if(validatePassword($_POST['password']) == FALSE){
+		header("Location: loginregister.php?error=Password should be at least 8 characters in length and should include at least one upper case letter, number, and special character&$user_data");
+		exit();
+	}
+  else if(empty($_POST['re_password'])){
         header("Location: loginregister.php?error=Re_Password is required&$user_data");
 	    exit();
 	}
@@ -43,7 +58,7 @@ if (isset($_POST['username']) && isset($_POST['password'])
 	    exit();
 	}
 
-  else if($pass !== $re_pass){
+  else if($_POST['password'] !== $_POST['re_password']){
         header("Location: loginregister.php?error=The confirmation password  does not match&$user_data");
 	    exit();
 	}
@@ -52,7 +67,7 @@ if (isset($_POST['username']) && isset($_POST['password'])
   else{
 
     // hashing the password
-          $pass = md5($pass);
+          $password = md5($password);
 
   	    $sql = "SELECT * FROM users WHERE user_loginname='$userid' ";
         $sql1 = "SELECT * FROM users WHERE user_email='$email' ";
@@ -68,7 +83,7 @@ if (isset($_POST['username']) && isset($_POST['password'])
   	        exit();
       }
       else {
-             $sql2 = "INSERT INTO users(user_loginname, user_password, user_name, user_email) VALUES('$userid', '$pass', '$username','$email')";
+             $sql2 = "INSERT INTO users(user_loginname, user_password, user_name, user_email) VALUES('$userid', '$password', '$username','$email')";
              $result2 = mysqli_query($conn, $sql2);
              if ($result2) {
              	 header("Location: loginregister.php?success=Your account has been created successfully");
