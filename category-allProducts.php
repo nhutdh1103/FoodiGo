@@ -84,6 +84,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_loginname'])) {
     </div>
 
 <!-- FOOTER -->
+
 <?php
     include('phpTemplates/footer.php');
 ?>

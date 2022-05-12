@@ -55,11 +55,11 @@
 
         //functions
         function getODate() {
-            $today = new DateTime(); //not working - what is the datetime object that gets inserted into the database
+            $today = new DateTime(); 
             return $today;
         }
 
-        function getONum() { //not guarenteed uniqueness
+        function getONum() { 
             $func = 17 * rand(0, 1000) + time(); //time() in seconds
             return $func;
         }
@@ -106,7 +106,7 @@
 
           echo '<h1 style="margin-top: 40px; margin-left: 20px; margin-bottom: 20px; text-align:center; font-size:240%;">Thank you! Your order has been placed.</h1>';
           
-          // register payment   //add in user id as well, right now user id set as just a single number 3.
+          // register payment
           $sql = "INSERT INTO payments (payment_user_id, payment_fname, payment_lname, payment_email,
           payment_address, payment_city, payment_state, payment_zip, payment_cardholder,
           payment_ccnumber, payment_expmonth, payment_expyear, payment_cvv,
@@ -116,17 +116,20 @@
           '$cardname','$cardnumber','$monthexp','$yearexp','$cvv','$billingfullname','$billingemail',
           '$billingaddress','$billingcity','$billingstate','$billingzip')";
 
-          //send sequel to database
+          //send sql to database
           $results = mysqli_query($conn, $sql);
 
             //declare all variables for orders table
+
             // $orderdate = getDate();
-            // $orderdate = date('m/d/Y h:i:s a', time()); //user friendly format
+            // $orderdate = date('m/d/Y h:i:s a', time()); 
+            //user friendly format
+
             date_default_timezone_set('America/Los_Angeles');
             $orderdate = date('Y-m-d H:i:s'); //for insertion to db;
             $orderid = getONum();
             /*--------need to get the order total details---*/
-            $userid = $_SESSION['user_id']; //temporary, will fix to current user using session or smtg
+            $userid = $_SESSION['user_id']; 
             $ordertotal = $_SESSION['finalprice']; // $finalprice in the cart page
             $ordertax = $_SESSION['taxes'];
             $orderstatus = "Processing Order";
@@ -136,11 +139,9 @@
             order_tax, order_date, order_delivery_status) VALUES ('$orderid',
             '$userid','$ordertotal','$ordertax','$orderdate','$orderstatus')";
 
-            //send sequel to database
+            //send sql to database
             $results2 = mysqli_query($conn, $sql2);
 
-
-            /*---probably need to insert orders-product-details data into database here too (for the images)------*/
             // $product_ID = 0;
             // $quantity = 100;
 
@@ -205,6 +206,7 @@
               echo "<br>";
               echo '<span> Total: $'.sprintf("%.2f", $ordertotal).'</span>';
               echo "<br>";
+
               // need to get the product details from databse
               // echo '<span>What You Have Ordered: </span>';
               // echo '<span>
@@ -222,6 +224,7 @@
               // </table>
               // </span>';
               // echo "<br>";
+
               echo '<span>Track Package:</span>';
               echo "<br>";
               echo '<div id="map"></div>';
@@ -230,8 +233,6 @@
 
               //Resets the cart after successful checkout
               unset($_SESSION["shopping_cart"]);
-
-              //not sure do i need to do this
               unset($_SESSION["tempProductQuantity"]);
 
           } else {
@@ -249,9 +250,6 @@
       }
     ?>
 
-<!--map api (work in progress)-->
-<!--probably link it to index.js-->
-
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKblPBimQUF-jQTgFwwuYXKYTcoG3hbE0&callback=initMap&libraries=&v=weekly"
   defer
@@ -262,7 +260,7 @@
   function initMap() {
       const labels = "AB";
 
-      // The location of the billing address (placeholder - need to use Geocoder in maps api)
+      // The location of the billing address 
       const address = { lat: 37.33219619200047, lng: 121.90493422446872 };
 
     // The location of the store
@@ -281,7 +279,6 @@
         position: address, label: labels[1], map: map,
       });
 
-      // doesn't seem to work - should adjust zoom so that both markers are visible on the map
       var markers = [markerA, markerB];
            var bounds = new google.maps.LatLngBounds();
            for (var i = 0; i < markers.length; i++) {
